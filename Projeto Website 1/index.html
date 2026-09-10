@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body>
+<body class="dark-mode">
     <header>
         <nav class="leftNav">
             <ul>
@@ -43,8 +44,24 @@
             </article>
         </div>
     </main>
-    <footer>
+        <footer>
+            <button class="themeButton" onclick="changeTheme()">
+                <span id="lighticon" class="material-symbols-outlined">
+                light_mode
+                </span>
+                <span id="darkicon" class="material-symbols-outlined">
+                dark_mode
+                </span>             
+            </button>
+        </footer>
 
-    </footer>
+        <script>
+            const button = document.querySelector("button")
+
+            button.onclick = () => {
+                document.body.classList.toggle("dark-mode")
+                button.classList.toggle("dark-mode")                
+            }
+        </script>
 </body>
 </html>
